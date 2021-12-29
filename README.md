@@ -9,15 +9,21 @@ Squareplus is a Softplus-Like activation function. It is a very simple smooth ap
 
 The form of squareplus is very simple. It only uses addition, multiplication, division and square root:
 
-$\text{SquarePlus}(x)=\frac{x+\sqrt{x^2+b}}{2}$
+<div align=center>
+<img src=https://latex.codecogs.com/gif.latex?SquarePlus(x)=\frac{x+\sqrt{x^2+b}}{2} />
+</div>
 
-b>0 in this form. When b=0, it degenerates to$\text{ReLU}(x)=max(x,0)$
+b>0 in this form. When b=0, it degenerates to ReLU(x)=max(x,0)
 
-![curve of SquarePlus](imgs/curve.png)
+<div align=center>
+<img src=imgs/curve.png width=75% />
+</div>
 
 The original paper pointed out that since only addition, multiplication, division and square root are used, the speed of squareplus (mainly on the CPU) will be faster than SoftPlus and other functions.
 
-![speed of different activation function](imgs/speed_compare.png)
+<div align=center>
+<img src=imgs/speed_compare.png width=45% />
+</div>
 
 In [jianlin su's blog](https://kexue.fm/archives/8833), it is pointed out that when b=1.52382103⋯, this function is closest to SoftPlus. The solution process is as follows:
 
